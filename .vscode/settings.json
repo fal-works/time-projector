@@ -1,0 +1,5 @@
+{
+  "eslint.format.enable": true,
+  "liveServer.settings.root": "/build",
+  "liveServer.settings.file": "index.html"
+}

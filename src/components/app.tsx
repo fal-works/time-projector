@@ -7,22 +7,22 @@ import NotFoundPage from "../routes/notfound";
 import Header from "./header";
 
 const App: FunctionalComponent = () => {
-    let currentUrl: string;
-    const handleRoute = (e: RouterOnChangeArgs) => {
-        currentUrl = e.url;
-    };
+  const handleRoute = (e: RouterOnChangeArgs) => {
+    e;
+  };
 
-    return (
-        <div id="app">
-            <Header />
-            <Router onChange={handleRoute}>
-                <Route path="/" component={Home} />
-                <Route path="/profile/" component={Profile} user="me" />
-                <Route path="/profile/:user" component={Profile} />
-                <NotFoundPage default />
-            </Router>
-        </div>
-    );
+  return (
+    <div id="app">
+      <Header />
+      <Router onChange={handleRoute}>
+        <Route path="/" component={Home} />
+        <Route path="/index.html" component={Home} />
+        <Route path="/profile/" component={Profile} user="me" />
+        <Route path="/profile/:user" component={Profile} />
+        <NotFoundPage default />
+      </Router>
+    </div>
+  );
 };
 
 export default App;
