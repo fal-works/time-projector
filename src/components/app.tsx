@@ -15,8 +15,9 @@ const App: FunctionalComponent = () => {
     <div id="app">
       <Header />
       <Router onChange={handleRoute}>
-        <Route path="/" component={Home} />
-        <Route path="/index.html" component={Home} />
+        <Route path="/" component={Home} query="0" />
+        <Route path="/:query" component={Home} />
+        <Route path="/index.html" component={Home} query="0" />
         <Route path="/profile/" component={Profile} user="me" />
         <Route path="/profile/:user" component={Profile} />
         <NotFoundPage default />
